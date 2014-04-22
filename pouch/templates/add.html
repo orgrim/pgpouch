@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% from "_helpers.html" import render_field %}
+{% set page_title = page %}
+{% block content %}
+<section>
+  <form action="{{ url_for('add') }}" method="post" class="form-horizontal" role="form">
+    {{ form.csrf_token }}
+    
+    {{ render_field(form.title) }}
+    {{ render_field(form.query, rows="10") }}
+    {{ render_field(form.versions) }}
+    {{ render_field(form.description) }}
+    {{ render_field(form.tags) }}
+
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-6">
+	<input type="submit" value="Add" class="btn btn-default" />
+      </div>
+    </div>
+  </form>
+</section>
+{% endblock %}
+

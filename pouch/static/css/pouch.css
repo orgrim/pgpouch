@@ -1,0 +1,52 @@
+body {
+  font: 12px/1.5 Bitstream Vera Sans, Helvetica, Arial, sans-serif;
+}
+
+section {
+  padding:20px 0;
+  margin:0 0 20px;
+}
+
+footer {
+  clear: both;
+  border-top:1px solid #e5e5e5;
+  margin-top: 20px; 
+  padding-top: 20px;
+  font-size: 11px;
+}
+
+footer p {
+  margin:0 0 10px;
+}
+
+ul.checkbox-list li label {
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+ul.checkbox-list li {
+  margin-top: 6px;
+}
+
+h1, .h1 {
+  font-size: 24px;
+}
+h2, .h2 {
+  font-size: 21px;
+}
+h3, .h3 {
+  font-size: 18px;
+}
+h4, .h4 {
+  font-size: 16px;
+}
+h5, .h5 {
+  font-size: 14px;
+}
+h6, .h6 {
+  font-size: 12px;
+}
+
+textarea#query {
+  font-family: Menlo,Monaco,Consolas,"Courier New", monospace;
+}

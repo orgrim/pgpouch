@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for q in queries %}
+<section>
+  <h2>{{ q.title }}</h2>
+  {% if q.tags %}
+  <ul class="tags list-inline">
+    {% for t in q.tags %}
+    <li><span class="glyphicon glyphicon-tag"></span> <a href="{{ url_for('by_tag', tag=t) }}">{{ t }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% if q.description %}<p>{{ q.description }}</p>{% endif %}
+  {%highlight 'sql' %}{{ q.query|safe }}{% endhighlight %}
+  {% if q.versions %}<p class="text-right"><small><em>Tested with PostgreSQL {{ q.versions }}.</em></small></p>{% endif %}
+</section>
+{% else %}
+<section>
+  <p><em>No entries here so far.</em></p>
+</section>
+{% endfor %}
+{% endblock %}

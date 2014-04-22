@@ -1,0 +1,3 @@
+DSN="host=localhost port=5432 dbname=pouch user=pouch password=pouch"
+DEBUG=False
+SECRET_KEY='one hard to find production key'
